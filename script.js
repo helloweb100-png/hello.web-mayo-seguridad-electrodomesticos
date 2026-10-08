@@ -80,7 +80,7 @@
      ------------------------------------------------------------------------ */
   function initAll() {
     [splitHeadings, initReveal, initNav, initMenu, initScrollFx, initPointerFx, initHeroNet, initCycle, initHud,
-      initMarquees, initTabs, initAccordion, initForm, initPick, initMisc].forEach(fn => {
+      initMarquees, initTabs, initAccordion, initGallery, initForm, initPick, initMisc].forEach(fn => {
       try { fn(); } catch (e) { console.warn('[MAYO] módulo con error:', fn.name, e); }
     });
   }
@@ -511,6 +511,94 @@
       });
     });
     if (items[0]) { items[0].classList.add('is-open'); $('.acc-btn', items[0]).setAttribute('aria-expanded', 'true'); }
+  }
+
+  /* ------------------------------------------------------------------------
+     12b · GALERÍA DE PORTONES: filtros + visor ampliado (teclado, swipe y WhatsApp)
+     ------------------------------------------------------------------------ */
+  function initGallery() {
+    const grid = $('#glGrid');
+    if (!grid) return;
+    const items = $$('.gl-item', grid);
+    const chips = $$('.gl-chip');
+
+    const applyFilter = cat => {
+      let n = 0;
+      items.forEach(li => { li.classList.remove('is-pop'); li.hidden = !(cat === 'all' || li.dataset.cat === cat); });
+      void grid.offsetWidth; // reinicia la animación de entrada
+      items.forEach(li => { if (!li.hidden) { li.style.setProperty('--i', Math.min(n++, 12)); li.classList.add('is-pop'); } });
+      chips.forEach(c => { const on = c.dataset.filter === cat; c.classList.toggle('is-on', on); c.setAttribute('aria-pressed', String(on)); });
+    };
+    chips.forEach(c => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
+
+    const lb = $('#lb');
+    if (!lb) return;
+    const img = $('#lbImg'), cap = $('#lbCap'), count = $('#lbCount'), wa = $('#lbWa'), stage = $('#lbStage');
+    const btnClose = $('#lbClose'), btnPrev = $('#lbPrev'), btnNext = $('#lbNext');
+    const isOpen = () => lb.classList.contains('is-open');
+    let list = [], pos = 0, opener = null;
+
+    const show = i => {
+      pos = (i + list.length) % list.length;
+      const thumb = $('img', list[pos]);
+      img.classList.add('is-loading');
+      img.onload = img.onerror = () => img.classList.remove('is-loading');
+      img.alt = thumb.alt;
+      img.src = thumb.dataset.full || thumb.currentSrc || thumb.src;
+      cap.textContent = thumb.alt;
+      count.textContent = (pos + 1) + ' / ' + list.length;
+      wa.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent('Hola, vi este portón en su página y quiero cotizar uno parecido: ' + thumb.alt + '.');
+      [pos + 1, pos - 1].forEach(k => { const t = $('img', list[(k + list.length) % list.length]); if (t && t.dataset.full) new Image().src = t.dataset.full; });
+    };
+    const open = li => {
+      list = items.filter(el => !el.hidden);
+      opener = $('.gl-btn', li);
+      show(list.indexOf(li));
+      lb.classList.add('is-open');
+      lb.setAttribute('aria-hidden', 'false');
+      root.classList.add('lb-open');
+      btnClose.focus({ preventScroll: true });
+    };
+    const close = () => {
+      if (!isOpen()) return;
+      lb.classList.remove('is-open');
+      lb.setAttribute('aria-hidden', 'true');
+      root.classList.remove('lb-open');
+      if (opener) opener.focus({ preventScroll: true });
+    };
+
+    grid.addEventListener('click', e => {
+      const btn = e.target.closest('.gl-btn');
+      if (btn) open(btn.closest('.gl-item'));
+    });
+    lb.addEventListener('click', e => { if (e.target.closest('[data-lb-close]')) close(); });
+    btnClose.addEventListener('click', close);
+    btnPrev.addEventListener('click', () => show(pos - 1));
+    btnNext.addEventListener('click', () => show(pos + 1));
+
+    document.addEventListener('keydown', e => {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); show(pos + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); show(pos - 1); }
+      else if (e.key === 'Tab') { // el foco se queda dentro del visor
+        const f = [btnClose, btnPrev, btnNext, wa];
+        const i = f.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+        else if (!e.shiftKey && (i === f.length - 1 || i === -1)) { e.preventDefault(); f[0].focus(); }
+      }
+    });
+
+    // Deslizar con el dedo para cambiar de foto
+    let sx = 0, sy = 0, down = false;
+    stage.addEventListener('pointerdown', e => { sx = e.clientX; sy = e.clientY; down = true; });
+    stage.addEventListener('pointercancel', () => { down = false; });
+    stage.addEventListener('pointerup', e => {
+      if (!down) return;
+      down = false;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) show(pos + (dx < 0 ? 1 : -1));
+    });
   }
 
   /* ------------------------------------------------------------------------

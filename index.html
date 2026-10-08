@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="MAYO Seguridad Electrónicos">
   <meta name="twitter:description" content="Seguridad electrónica y comodidad con equipos de marcas líderes y la mejor garantía.">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23FFB300'/%3E%3Cpath d='M32 9l17 6v15c0 11-8 19-17 23-9-4-17-12-17-23V15z' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='30' r='8' fill='%232F8CFF'/%3E%3Ccircle cx='32' cy='30' r='3' fill='%23FFB300'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="logo.jpeg">
 
   <!-- ============ Fuentes: Sora (títulos), Manrope (texto), JetBrains Mono (detalles HUD) ============ -->
@@ -92,29 +92,10 @@
     <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#8FD0FF"/><stop offset=".5" stop-color="#2F8CFF"/><stop offset="1" stop-color="#1450C4"/>
     </linearGradient>
-    <linearGradient id="gShield" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#9CC4FF"/>
-    </linearGradient>
-    <linearGradient id="gShieldFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".16"/><stop offset="1" stop-color="#2F8CFF" stop-opacity=".05"/>
-    </linearGradient>
     <linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFD769"/><stop offset="1" stop-color="#FFA800"/>
     </linearGradient>
   </defs>
-
-  <!-- Marca (escudo + engrane + llave + órbita) -->
-  <symbol id="i-mark" viewBox="0 0 100 100">
-    <path d="M50 5 83 17v30c0 22-15 38-33 48C32 85 17 69 17 47V17z" fill="url(#gShieldFill)" stroke="url(#gShield)" stroke-width="4.5" stroke-linejoin="round"/>
-    <g transform="translate(53 44)">
-      <circle r="17" fill="none" stroke="url(#gBlue)" stroke-width="7" stroke-dasharray="5.34 5.34"/>
-      <circle r="14" fill="url(#gBlue)"/>
-      <circle r="6" fill="var(--mark-hole, #071225)"/>
-    </g>
-    <path d="M27 24 45 42" fill="none" stroke="#8FD0FF" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="26" cy="23" r="5.5" fill="none" stroke="#8FD0FF" stroke-width="4" stroke-dasharray="26 9" transform="rotate(-50 26 23)"/>
-    <path d="M8 62C26 86 80 80 95 18 86 54 44 72 8 62z" fill="url(#gBlue)"/>
-  </symbol>
 
   <!-- Íconos de línea (24×24) -->
   <symbol id="i-cam" viewBox="0 0 24 24"><path d="M16.75 12h3.632a1 1 0 0 1 .894 1.447l-2.034 4.069a1 1 0 0 1-1.708.134l-2.124-2.97"/><path d="M17.106 9.053a1 1 0 0 1 .447 1.341l-3.106 6.211a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3z"/><path d="M2 19h3.76a2 2 0 0 0 1.8-1.1L9 15"/><path d="M2 21v-4"/><path d="M7 9h.01"/></symbol>
@@ -138,6 +119,10 @@
   <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".7" fill="currentColor"/></symbol>
   <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2M11 8.3v5.4M8.3 11h5.4"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
 
   <!-- Íconos rellenos -->
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97s-.47-.15-.67.15-.77.97-.94 1.16-.35.22-.65.07a8.1 8.1 0 0 1-2.39-1.48 9 9 0 0 1-1.65-2.06c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52s.2-.3.3-.5.05-.37-.03-.52-.67-1.61-.92-2.2c-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.21 3.07 2.1 3.2 5.08 4.49c.7.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41s.25-1.29.17-1.41-.27-.2-.57-.35M12.05 21.78h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42" fill="currentColor" stroke="none"/></symbol>
@@ -164,17 +149,7 @@
         <circle class="ld-arc" cx="100" cy="100" r="94" pathLength="100"/>
       </svg>
       <span class="ld-orbit"><i></i></span>
-      <svg class="mark ld-mark" viewBox="0 0 100 100">
-        <path d="M50 5 83 17v30c0 22-15 38-33 48C32 85 17 69 17 47V17z" fill="url(#gShieldFill)" stroke="url(#gShield)" stroke-width="4.5" stroke-linejoin="round"/>
-        <g transform="translate(53 44)"><g class="mk-gear">
-          <circle r="17" fill="none" stroke="url(#gBlue)" stroke-width="7" stroke-dasharray="5.34 5.34"/>
-          <circle r="14" fill="url(#gBlue)"/>
-          <circle r="6" fill="#071225"/>
-        </g></g>
-        <path d="M27 24 45 42" fill="none" stroke="#8FD0FF" stroke-width="5" stroke-linecap="round"/>
-        <circle cx="26" cy="23" r="5.5" fill="none" stroke="#8FD0FF" stroke-width="4" stroke-dasharray="26 9" transform="rotate(-50 26 23)"/>
-        <path class="mk-swoosh" d="M8 62C26 86 80 80 95 18 86 54 44 72 8 62z" fill="url(#gBlue)"/>
-      </svg>
+      <span class="logo-badge logo-badge--round ld-mark"><img src="logo.jpeg" alt="" width="1440" height="1444" decoding="async" fetchpriority="high"></span>
     </div>
 
     <p class="ld-brand"><b>MAYO</b> <span>Seguridad</span><em>Electrónicos</em></p>
@@ -195,12 +170,13 @@
 <header class="nav" id="nav">
   <div class="nav-in">
     <a class="brand" href="#inicio" aria-label="MAYO Seguridad Electrónicos, ir al inicio">
-      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-mark"/></svg>
+      <span class="logo-badge brand-mark" aria-hidden="true"><img src="logo.jpeg" alt="" width="1440" height="1444" decoding="async"></span>
       <span class="brand-txt"><b>MAYO</b><small>Seguridad Electrónicos</small></span>
     </a>
 
     <nav class="nav-links" aria-label="Principal">
       <a href="#servicios">Servicios</a>
+      <a href="#portones">Portones</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#soluciones">Soluciones</a>
       <a href="#proceso">Proceso</a>
@@ -220,12 +196,13 @@
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu-in" aria-label="Menú móvil">
     <a href="#servicios"><i>01</i>Servicios</a>
-    <a href="#nosotros"><i>02</i>Nosotros</a>
-    <a href="#soluciones"><i>03</i>Soluciones</a>
-    <a href="#proceso"><i>04</i>Proceso</a>
-    <a href="#marcas"><i>05</i>Marcas</a>
-    <a href="#faq"><i>06</i>Preguntas</a>
-    <a href="#contacto"><i>07</i>Contacto</a>
+    <a href="#portones"><i>02</i>Portones</a>
+    <a href="#nosotros"><i>03</i>Nosotros</a>
+    <a href="#soluciones"><i>04</i>Soluciones</a>
+    <a href="#proceso"><i>05</i>Proceso</a>
+    <a href="#marcas"><i>06</i>Marcas</a>
+    <a href="#faq"><i>07</i>Preguntas</a>
+    <a href="#contacto"><i>08</i>Contacto</a>
   </nav>
   <div class="menu-foot">
     <a class="btn btn--primary btn--block" href="#contacto">Estoy listo, quiero mi cotización</a>
@@ -300,17 +277,7 @@
         <span class="blip" style="--x:36%;--y:26%;--d:3.4s"></span>
 
         <div class="hud-core">
-          <svg class="mark" viewBox="0 0 100 100">
-            <path d="M50 5 83 17v30c0 22-15 38-33 48C32 85 17 69 17 47V17z" fill="url(#gShieldFill)" stroke="url(#gShield)" stroke-width="4.5" stroke-linejoin="round"/>
-            <g transform="translate(53 44)"><g class="mk-gear">
-              <circle r="17" fill="none" stroke="url(#gBlue)" stroke-width="7" stroke-dasharray="5.34 5.34"/>
-              <circle r="14" fill="url(#gBlue)"/>
-              <circle r="6" fill="#071225"/>
-            </g></g>
-            <path d="M27 24 45 42" fill="none" stroke="#8FD0FF" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="26" cy="23" r="5.5" fill="none" stroke="#8FD0FF" stroke-width="4" stroke-dasharray="26 9" transform="rotate(-50 26 23)"/>
-            <path d="M8 62C26 86 80 80 95 18 86 54 44 72 8 62z" fill="url(#gBlue)"/>
-          </svg>
+          <span class="logo-badge logo-badge--round"><img src="logo.jpeg" alt="" width="1440" height="1444" decoding="async"></span>
         </div>
 
         <div class="chip chip--1"><svg class="ico" aria-hidden="true"><use href="#i-cam"/></svg><div><small>Cámaras</small><b><i class="st st--ok"></i><span data-status="cam">En vivo</span></b></div></div>
@@ -549,6 +516,197 @@
 </section>
 
 <!-- ======================================================================
+     PORTONES (galería con filtros y visor ampliado)
+     Para agregar fotos: copia un <li class="gl-item"> y cambia data-cat, src, srcset y alt.
+     data-cat: herreria | acabados | ventanas
+     ====================================================================== -->
+<section class="sec gallery" id="portones" aria-labelledby="gal-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow rv"><i>02</i> Portones</p>
+      <h2 class="h2 split" id="gal-title">Encuentra el portón que <span class="grad">va con tu casa</span></h2>
+      <p class="sub rv">Mira diseños y acabados de portones, elige el que más te guste y platícanos. Te asesoramos y lo dejamos automatizado para que abra y cierre con un toque.</p>
+    </header>
+
+    <div class="gl-filters rv" role="group" aria-label="Filtrar portones por tipo">
+      <button class="gl-chip is-on" type="button" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="gl-chip" type="button" data-filter="herreria" aria-pressed="false">Herrería y lámina</button>
+      <button class="gl-chip" type="button" data-filter="acabados" aria-pressed="false">Acabados y colores</button>
+      <button class="gl-chip" type="button" data-filter="ventanas" aria-pressed="false">Ventanas decorativas</button>
+    </div>
+
+    <ul class="gl-grid rv" id="glGrid">
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Casa con portón de dos hojas en café oscuro, jaladeras de acero y puerta peatonal">
+          <img src="img/portones/portones-13-s.jpg" srcset="img/portones/portones-13-s.jpg 760w, img/portones/portones-13.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-13.jpg" alt="Casa con portón de dos hojas en café oscuro, jaladeras de acero y puerta peatonal" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Chocolate Liso en fachada blanca">
+          <img src="img/portones/portones-15-s.jpg" srcset="img/portones/portones-15-s.jpg 760w, img/portones/portones-15.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-15.jpg" alt="Portón con acabado Chocolate Liso en fachada blanca" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón de dos hojas en gris oscuro con franjas y jaladeras de acero inoxidable">
+          <img src="img/portones/portones-02-s.jpg" srcset="img/portones/portones-02-s.jpg 760w, img/portones/portones-02.jpg 1080w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-02.jpg" alt="Portón de dos hojas en gris oscuro con franjas y jaladeras de acero inoxidable" width="760" height="735" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Roble Claro en una casa moderna">
+          <img src="img/portones/portones-21-s.jpg" srcset="img/portones/portones-21-s.jpg 760w, img/portones/portones-21.jpg 1041w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-21.jpg" alt="Portón con acabado Roble Claro en una casa moderna" width="760" height="700" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de dos hojas con líneas doradas y jaladeras de acero">
+          <img src="img/portones/portones-10-s.jpg" srcset="img/portones/portones-10-s.jpg 760w, img/portones/portones-10.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-10.jpg" alt="Portón negro de dos hojas con líneas doradas y jaladeras de acero" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portones con acabado Roble Claro en una cochera amplia">
+          <img src="img/portones/portones-17-s.jpg" srcset="img/portones/portones-17-s.jpg 760w, img/portones/portones-17.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-17.jpg" alt="Portones con acabado Roble Claro en una cochera amplia" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de dos hojas con barrotes horizontales y detalles cuadrados">
+          <img src="img/portones/portones-04-s.jpg" srcset="img/portones/portones-04-s.jpg 760w, img/portones/portones-04.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-04.jpg" alt="Portón negro de dos hojas con barrotes horizontales y detalles cuadrados" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Chocolate Liso y puerta peatonal en una casa moderna">
+          <img src="img/portones/portones-22-s.jpg" srcset="img/portones/portones-22-s.jpg 760w, img/portones/portones-22.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-22.jpg" alt="Portón con acabado Chocolate Liso y puerta peatonal en una casa moderna" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de tres hojas con jaladeras verticales y rejilla en la parte baja">
+          <img src="img/portones/portones-06-s.jpg" srcset="img/portones/portones-06-s.jpg 760w, img/portones/portones-06.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-06.jpg" alt="Portón negro de tres hojas con jaladeras verticales y rejilla en la parte baja" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Roble Claro junto a un muro de piedra">
+          <img src="img/portones/portones-20-s.jpg" srcset="img/portones/portones-20-s.jpg 760w, img/portones/portones-20.jpg 1040w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-20.jpg" alt="Portón con acabado Roble Claro junto a un muro de piedra" width="760" height="701" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón de herrería color café oscuro con barrotes horizontales y puerta peatonal integrada">
+          <img src="img/portones/portones-01-s.jpg" srcset="img/portones/portones-01-s.jpg 760w, img/portones/portones-01.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-01.jpg" alt="Portón de herrería color café oscuro con barrotes horizontales y puerta peatonal integrada" width="760" height="881" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Negro Liso en cochera de dos puertas">
+          <img src="img/portones/portones-16-s.jpg" srcset="img/portones/portones-16-s.jpg 760w, img/portones/portones-16.jpg 1041w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-16.jpg" alt="Portón con acabado Negro Liso en cochera de dos puertas" width="760" height="700" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de tres paneles con listones horizontales">
+          <img src="img/portones/portones-09-s.jpg" srcset="img/portones/portones-09-s.jpg 760w, img/portones/portones-09.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-09.jpg" alt="Portón negro de tres paneles con listones horizontales" width="760" height="596" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Roble Oscuro en una casa con techo de teja">
+          <img src="img/portones/portones-23-s.jpg" srcset="img/portones/portones-23-s.jpg 760w, img/portones/portones-23.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-23.jpg" alt="Portón con acabado Roble Oscuro en una casa con techo de teja" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de dos hojas con franjas de acero y vidrios esmerilados">
+          <img src="img/portones/portones-07-s.jpg" srcset="img/portones/portones-07-s.jpg 760w, img/portones/portones-07.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-07.jpg" alt="Portón negro de dos hojas con franjas de acero y vidrios esmerilados" width="760" height="428" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portones con acabado Negro Rayas en fachada con jardín">
+          <img src="img/portones/portones-18-s.jpg" srcset="img/portones/portones-18-s.jpg 760w, img/portones/portones-18.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-18.jpg" alt="Portones con acabado Negro Rayas en fachada con jardín" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de listones horizontales en la cochera de una casa">
+          <img src="img/portones/portones-11-s.jpg" srcset="img/portones/portones-11-s.jpg 760w, img/portones/portones-11.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-11.jpg" alt="Portón negro de listones horizontales en la cochera de una casa" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón con acabado Ecuador Roble Oscuro junto a un muro de piedra">
+          <img src="img/portones/portones-27-s.jpg" srcset="img/portones/portones-27-s.jpg 760w, img/portones/portones-27.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-27.jpg" alt="Portón con acabado Ecuador Roble Oscuro junto a un muro de piedra" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón negro de herrería con barrotes horizontales y lámina en la parte baja">
+          <img src="img/portones/portones-08-s.jpg" srcset="img/portones/portones-08-s.jpg 760w, img/portones/portones-08.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-08.jpg" alt="Portón negro de herrería con barrotes horizontales y lámina en la parte baja" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="acabados">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portones con acabado Ecuador Roble Oscuro con pequeñas ventanas">
+          <img src="img/portones/portones-19-s.jpg" srcset="img/portones/portones-19-s.jpg 760w, img/portones/portones-19.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-19.jpg" alt="Portones con acabado Ecuador Roble Oscuro con pequeñas ventanas" width="760" height="675" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón blanco de herrería con barrotes horizontales y detalles cuadrados negros">
+          <img src="img/portones/portones-03-s.jpg" srcset="img/portones/portones-03-s.jpg 760w, img/portones/portones-03.jpg 1080w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-03.jpg" alt="Portón blanco de herrería con barrotes horizontales y detalles cuadrados negros" width="760" height="504" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón blanco de paneles con ventanas en la parte superior">
+          <img src="img/portones/portones-14-s.jpg" srcset="img/portones/portones-14-s.jpg 760w, img/portones/portones-14.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-14.jpg" alt="Portón blanco de paneles con ventanas en la parte superior" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Portón blanco de paneles con pequeñas ventanas en la parte superior">
+          <img src="img/portones/portones-05-s.jpg" srcset="img/portones/portones-05-s.jpg 760w, img/portones/portones-05.jpg 1031w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-05.jpg" alt="Portón blanco de paneles con pequeñas ventanas en la parte superior" width="760" height="478" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="herreria">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Protección de ventana en herrería negra con diseño geométrico">
+          <img src="img/portones/portones-12-s.jpg" srcset="img/portones/portones-12-s.jpg 760w, img/portones/portones-12.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-12.jpg" alt="Protección de ventana en herrería negra con diseño geométrico" width="760" height="571" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="ventanas">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Diseño de ventana para portón: Catedral">
+          <img src="img/portones/portones-25-s.jpg" srcset="img/portones/portones-25-s.jpg 760w, img/portones/portones-25.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-25.jpg" alt="Diseño de ventana para portón: Catedral" width="760" height="674" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="ventanas">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Diseño de ventana para portón: Cascada">
+          <img src="img/portones/portones-26-s.jpg" srcset="img/portones/portones-26-s.jpg 760w, img/portones/portones-26.jpg 1080w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-26.jpg" alt="Diseño de ventana para portón: Cascada" width="760" height="673" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+      <li class="gl-item" data-cat="ventanas">
+        <button class="gl-btn" type="button" aria-label="Ampliar foto: Diseños de ventana para portón: Rueda de carreta y Rayo de sol (4 piezas)">
+          <img src="img/portones/portones-24-s.jpg" srcset="img/portones/portones-24-s.jpg 760w, img/portones/portones-24.jpg 1079w" sizes="(min-width: 960px) 360px, (min-width: 640px) 31vw, 46vw" data-full="img/portones/portones-24.jpg" alt="Diseños de ventana para portón: Rueda de carreta y Rayo de sol (4 piezas)" width="760" height="375" loading="lazy" decoding="async">
+          <span class="gl-zoom" aria-hidden="true"><svg class="ico"><use href="#i-zoom"/></svg></span>
+        </button>
+      </li>
+    </ul>
+
+    <div class="center rv">
+      <a class="btn btn--primary btn--lg mag" href="#contacto" data-pick="Automatización de portones" data-msg="Hola, vi los portones de su página y quiero cotizar uno automático."><span>Me gustó uno, quiero cotizarlo</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================
      NOSOTROS
      ====================================================================== -->
 <section class="sec about" id="nosotros" aria-labelledby="about-title">
@@ -575,7 +733,7 @@
     </div>
 
     <div class="about-copy">
-      <p class="eyebrow rv"><i>02</i> Nuestro negocio</p>
+      <p class="eyebrow rv"><i>03</i> Nuestro negocio</p>
       <h2 class="h2 split" id="about-title">Seguridad y comodidad, <span class="grad">sin complicaciones.</span></h2>
       <p class="lead rv">Nuestra misión es simple: satisfacer las necesidades de nuestros clientes dándoles la máxima seguridad y comodidad.</p>
       <p class="rv">Lo logramos con equipos de la más alta calidad, instalación profesional y la mejor garantía. Somos distribuidores de las marcas líderes a nivel mundial, así que cada equipo que instalamos cuenta con el respaldo de un fabricante reconocido.</p>
@@ -598,7 +756,7 @@
 <section class="sec sec--light solutions" id="soluciones" aria-labelledby="sol-title">
   <div class="wrap">
     <header class="sec-head sec-head--center">
-      <p class="eyebrow rv"><i>03</i> Soluciones a tu medida</p>
+      <p class="eyebrow rv"><i>04</i> Soluciones a tu medida</p>
       <h2 class="h2 split" id="sol-title">¿Qué quieres <span class="grad">proteger</span> hoy?</h2>
       <p class="sub rv">Elige tu caso y mira cómo combinamos nuestros servicios para cuidarlo.</p>
     </header>
@@ -616,9 +774,9 @@
 
         <article class="panel is-active" role="tabpanel" id="panel-casa" aria-labelledby="tab-casa">
           <figure class="ph panel-media">
-            <img src="https://images.pexels.com/photos/8186510/pexels-photo-8186510.jpeg?auto=compress&cs=tinysrgb&w=1000"
-                 srcset="https://images.pexels.com/photos/8186510/pexels-photo-8186510.jpeg?auto=compress&cs=tinysrgb&w=640 640w, https://images.pexels.com/photos/8186510/pexels-photo-8186510.jpeg?auto=compress&cs=tinysrgb&w=1000 1000w"
-                 sizes="(min-width: 960px) 520px, 92vw" alt="Casa con cochera y portón, lista para protegerse con cámaras, alarma y cerca eléctrica" width="1000" height="667" loading="lazy" decoding="async">
+            <img src="img/portones/portones-13-s.jpg"
+                 srcset="img/portones/portones-13-s.jpg 760w, img/portones/portones-13.jpg 1079w"
+                 sizes="(min-width: 960px) 520px, 92vw" alt="Casa con portón de dos hojas en café oscuro y puerta peatonal, lista para protegerse con cámaras, alarma y cerca eléctrica" width="1079" height="810" loading="lazy" decoding="async">
           </figure>
           <div class="panel-body">
             <h3>Tu casa, protegida de la entrada a la última ventana</h3>
@@ -699,7 +857,7 @@
 <section class="sec process" id="proceso" aria-labelledby="proc-title">
   <div class="wrap">
     <header class="sec-head sec-head--center">
-      <p class="eyebrow rv"><i>04</i> Cómo trabajamos</p>
+      <p class="eyebrow rv"><i>05</i> Cómo trabajamos</p>
       <h2 class="h2 split" id="proc-title">Así de fácil es <span class="grad">empezar</span></h2>
       <p class="sub rv">Sin trámites eternos ni letras chiquitas. Cuatro pasos y tu espacio queda protegido.</p>
     </header>
@@ -744,7 +902,7 @@
   <div class="wrap why-grid">
 
     <div class="why-copy">
-      <p class="eyebrow rv"><i>05</i> Por qué elegirnos</p>
+      <p class="eyebrow rv"><i>06</i> Por qué elegirnos</p>
       <h2 class="h2 split" id="why-title">Un solo aliado para <span class="grad">todo lo que cuidas</span></h2>
       <p class="sub rv">Menos proveedores, menos dolores de cabeza. En MAYO instalamos, mantenemos y reparamos con el mismo equipo.</p>
 
@@ -794,7 +952,7 @@
 <section class="sec brands" id="marcas" aria-labelledby="brands-title">
   <div class="wrap">
     <header class="sec-head sec-head--center">
-      <p class="eyebrow rv"><i>06</i> Nuestras marcas</p>
+      <p class="eyebrow rv"><i>07</i> Nuestras marcas</p>
       <h2 class="h2 split" id="brands-title">Distribuidores de las <span class="grad">marcas líderes del mundo</span></h2>
       <p class="sub rv">Trabajamos con fabricantes reconocidos para que tu inversión dure y funcione. Esto es lo que instalamos y distribuimos.</p>
     </header>
@@ -835,7 +993,7 @@
 <section class="sec faq" id="faq" aria-labelledby="faq-title">
   <div class="wrap faq-grid">
     <header class="sec-head">
-      <p class="eyebrow rv"><i>07</i> Preguntas frecuentes</p>
+      <p class="eyebrow rv"><i>08</i> Preguntas frecuentes</p>
       <h2 class="h2 split" id="faq-title">Resolvemos tus <span class="grad">dudas</span> antes de empezar</h2>
       <p class="sub rv">¿No ves tu pregunta? Escríbenos y te contestamos directamente.</p>
       <a class="btn btn--glass mag rv" href="https://wa.me/529612289511?text=Hola%2C%20tengo%20una%20duda." target="_blank" rel="noopener"><svg class="ico ico--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Preguntar por WhatsApp</span></a>
@@ -878,7 +1036,7 @@
   <div class="wrap contact-grid">
 
     <div class="contact-copy">
-      <p class="eyebrow rv"><i>08</i> Contacto</p>
+      <p class="eyebrow rv"><i>09</i> Contacto</p>
       <h2 class="h2 split" id="contact-title">Hablemos de lo que <span class="grad">quieres proteger</span></h2>
       <p class="sub rv">Cuéntanos tu caso. Al enviar el formulario se abrirá WhatsApp con tu mensaje listo para mandarlo a nuestro equipo.</p>
 
@@ -950,8 +1108,7 @@
     <div class="foot-top">
       <div class="foot-brand">
         <a class="brand" href="#inicio" aria-label="MAYO Seguridad Electrónicos, ir al inicio">
-          <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-mark"/></svg>
-          <span class="brand-txt"><b>MAYO</b><small>Seguridad Electrónicos</small></span>
+          <span class="logo-badge logo-badge--full foot-logo" aria-hidden="true"><img src="logo.jpeg" alt="" width="1440" height="1444" loading="lazy" decoding="async"></span>
         </a>
         <p>Seguridad y comodidad con equipos de la más alta calidad y la mejor garantía.</p>
         <ul class="social" aria-label="Redes sociales">
@@ -1014,6 +1171,24 @@
     <i class="wa-pulse" aria-hidden="true"></i><i class="wa-pulse wa-pulse--2" aria-hidden="true"></i>
     <svg class="ico ico--fill" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
+</div>
+
+<!-- ======================================================================
+     VISOR DE FOTOS (galería de portones)
+     ====================================================================== -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de portones" aria-hidden="true">
+  <div class="lb-backdrop" data-lb-close></div>
+  <figure class="lb-stage" id="lbStage">
+    <img class="lb-img" id="lbImg" alt="" draggable="false">
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-close" type="button" id="lbClose" aria-label="Cerrar galería"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" id="lbPrev" aria-label="Foto anterior"><svg class="ico" aria-hidden="true"><use href="#i-prev"/></svg></button>
+  <button class="lb-btn lb-next" type="button" id="lbNext" aria-label="Foto siguiente"><svg class="ico" aria-hidden="true"><use href="#i-next"/></svg></button>
+  <div class="lb-bar">
+    <span class="lb-count" id="lbCount" aria-live="polite"></span>
+    <a class="btn btn--primary btn--sm" id="lbWa" href="https://wa.me/529612289511" target="_blank" rel="noopener"><svg class="ico ico--fill" aria-hidden="true"><use href="#i-wa"/></svg><span>Quiero cotizar este modelo</span></a>
+  </div>
 </div>
 
 <script src="script.js"></script>
